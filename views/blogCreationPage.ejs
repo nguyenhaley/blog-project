@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css">
+    <title>blog creation page</title>
+  </head>
+  <body>
+    <button onclick="location.href= '/homepage' ">HOMEPAGE</button>
+
+    <div class="blog-creation">
+        <h1>Create Blog Post</h1>
+        <form action="/submit" method="POST" class="create-post">
+            <label for="title"> Title (required): </label>
+            <input type="text" id="title" name="title" required> <br>
+
+            <label for="author"> Author (required): </label>
+            <input type="text" name="author" required><br>
+
+            <label for="content"> Blog content (required):</label>
+            <textarea name="content" rows="10" cols="30" id="content" required></textarea><br>
+
+            <label for="date"> Date (required): </label>
+            <input type="date" name="date" id="date" required><br>
+
+            <input type="submit" value="Create Post :)">
+        </form>
+    </div>
+
+  </body>
+</html>

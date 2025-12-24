@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css">
+    <title>blog edit page</title>
+  </head>
+  <body>
+    <button onclick="location.href= '/homepage' ">HOMEPAGE</button>
+    
+    <div class="blog-creation">
+        <h1>Edit Blog Post</h1>
+        <form action="/edit/<%= post.id %>" method="POST" class="create-post">
+            <label for="title"> Title (required): </label><br>
+            <input type="text" id="title" name="title" value="<%= post.title %>" required><br>
+            <label for="author"> Author (required): </label><br>
+            <input type="text" name="author" value="<%= post.author %>" required><br>
+            <label for="content"> Blog content (required):</label><br>
+            <textarea name="content" rows="10" cols="30" required><%= post.content %></textarea><br>
+            <label for="date"> Date (required): </label><br>
+            <input type="date" name="date" value="<%= post.date %>" required><br><br>
+            <input type="submit" value="Submit Changes :)">
+        </form>
+    </div>
+
+  </body>
+</html>
